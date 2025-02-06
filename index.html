@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tr3ple-Tech</title>
+    <meta name="description" content="Emerald Codelines provides cutting-edge software development, AI solutions, and real estate technology. Explore our services and products like EC VistaCore and EC Urban Lens.">
+    <meta name="keywords" content="software development, AI solutions, real estate technology, EC VistaCore, EC Urban Lens, Emerald Codelines, custom software Nigeria, mobile app development Abuja">
+    <meta name="author" content="Emerald Codelines">
+    <meta property="og:title" content="Emerald Codelines | Innovative Technology Solutions">
+    <meta property="og:description" content="Emerald Codelines offers custom software development, AI solutions, and real estate technology. Discover our services and products like EC VistaCore and EC Urban Lens.">
+    <meta property="og:image" content="https://www.emeraldcodelines.org/images/mainlogo.png">
+    <meta property="og:url" content="https://www.emeraldcodelines.org">
+    <link rel="canonical" href="https://www.emeraldcodelines.org">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        :root {
+            --emerald-green: #cc2e2e;
+            --deep-blue: #2c3e50;
+            --text-dark: #333;
+            --text-light: #ecf0f1;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Header and Hamburger Menu */
+        header {
+            background: var(--deep-blue);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--emerald-green);
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            border-radius: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--emerald-green);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger .line {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Navigation */
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: var(--deep-blue);
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)),
+                        url('./images/cover.jpg');
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: var(--emerald-green);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ae2727;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--deep-blue);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--emerald-green);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--deep-blue);
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background: var(--emerald-green);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: var(--emerald-green);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .services-grid, .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="./images/light.png" alt="Tr3ple-Tech Global Ventures Logo">
+                Tr3ple-Tech
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="emergency-banner">
+        🔧 24/7 Emergency Electrical Services Available - Call Now: 07088000839
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Powering Smarter Living in Abuja</h1>
+            <p>Certified electrical & solar solutions for homes and businesses</p>
+            <button onclick="redirectToWhatsApp()" class="cta-button">Get Free Consultation</button>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Our Expert Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Professional Wiring</h3>
+                <p>Complete electrical solutions for residential & industrial spaces</p>
+                <ul class="service-features">
+                    <li>✓ Full house wiring</li>
+                    <li>✓ Circuit installation</li>
+                    <li>✓ Electrical audits</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-solar-panel"></i>
+                <h3>Solar Solutions</h3>
+                <p>Custom solar systems designed for Nigerian homes</p>
+                <ul class="service-features">
+                    <li>✓ Solar installation</li>
+                    <li>✓ System maintenance</li>
+                    <li>✓ Energy consulting</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h3>Smart Security</h3>
+                <p>Advanced surveillance systems for complete protection</p>
+                <ul class="service-features">
+                    <li>✓ CCTV installation</li>
+                    <li>✓ Access control</li>
+                    <li>✓ Smart home integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="gallery">
+        <h2>Our Recent Projects</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/image (1).jpg" alt="Commercial Solar Panel Installation">
+                <div class="gallery-caption">Commercial Solar Installation</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/image (4).jpg" alt="High-Tech CCTV Setup">
+                <div class="gallery-caption">Office Surveillance System</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/image (2).jpg" alt="Industrial Electrical Wiring">
+                <div class="gallery-caption">Industrial Wiring Project</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/image (3).jpg" alt="Modern Home Electrical Work">
+                <div class="gallery-caption">Residential Wiring</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-ribbon">
+        <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:07088000839">0708 8000 839</a>
+        </div>
+        <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/09072751466">Chat on WhatsApp</a>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:tr3pletechconcepts@gmail.com">Email Us</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Tr3ple-Tech Global Ventures</h3>
+            <p>3&4 Kurudu Junction, Opposite Kurudu Mosque<br>
+            Karshi Road, Abuja, FCT</p>
+            
+            <div class="business-hours">
+                <h4>Operating Hours</h4>
+                <p>Mon-Fri: 8:00 AM - 6:00 PM<br>
+                Sat: 9:00 AM - 4:00 PM</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Tr3ple-Tech Global Ventures. NERC Certified | Licensed Electricians</p>
+    </footer>
+
+    <script>
+        function redirectToWhatsApp() {
+            const message = encodeURIComponent("Hello Tr3ple-Tech! I need professional electrical/solar services. Please advise.");
+            window.location.href = `https://wa.me/09072751466?text=${message}`;
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Tr3ple-Tech Global Ventures",
+        "image": "https://www.tr3pletech.com/images/ttgv-logo.png",
+        "telephone": "+2347088000839",
+        "email": "tr3pletechconcepts@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3&4 Kurudu Junction, Opposite Kurudu Mosque",
+            "addressLocality": "Abuja",
+            "addressRegion": "FCT"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        }
+    }
+    </script>
+</body>
+</html>
