@@ -265,6 +265,77 @@
         footer a:hover {
             text-decoration: underline;
         }
+  /* styles.css */
+  .section {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -364,21 +435,25 @@
     <section class="section" id="gallery">
         <h2>Our Recent Projects</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">
+            <div class="gallery-item" onclick="openModal('images/image (1).jpg')">
                 <img src="images/image (1).jpg" alt="Commercial Solar Panel Installation">
                 <div class="gallery-caption">Commercial Solar Installation</div>
             </div>
-            <div class="gallery-item">
-                <img src="images/image (4).jpg" alt="High-Tech CCTV Setup">
-                <div class="gallery-caption">Office Surveillance System</div>
+            <div class="gallery-item" onclick="openModal('images/image (3).jpg')">
+                <img src="images/image (3).jpg" alt="High-Tech CCTV Setup">
+                <div class="gallery-caption">Commercial Solar Installation</div>
             </div>
-            <div class="gallery-item">
-                <img src="images/image (2).jpg" alt="Industrial Electrical Wiring">
-                <div class="gallery-caption">Industrial Wiring Project</div>
+            <div class="gallery-item" onclick="openModal('images/image (4).jpg')">
+                <img src="images/image (4).jpg" alt="Industrial Electrical Wiring">
+                <div class="gallery-caption">Commercial Solar Installation</div>
             </div>
-            <div class="gallery-item">
-                <img src="images/image (3).jpg" alt="Modern Home Electrical Work">
-                <div class="gallery-caption">Residential Wiring</div>
+            <div class="gallery-item" onclick="openModal('images/image (5).jpg')">
+                <img src="images/image (5).jpg" alt="Modern Home Electrical Work">
+                <div class="gallery-caption">Commercial Solar Installation</div>
+            </div>
+            <div class="gallery-item" onclick="openModal('images/image (6).jpg')">
+                <img src="images/image (6).jpg" alt="Modern Home Electrical Work">
+                <div class="gallery-caption">Commercial Solar Installation</div>
             </div>
         </div>
     </section>
@@ -390,7 +465,7 @@
         </div>
         <div class="contact-item">
             <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.me/09072751466">Chat on WhatsApp</a>
+            <a href="https://wa.me/+2349072751466">Chat on WhatsApp</a>
         </div>
         <div class="contact-item">
             <i class="fas fa-envelope"></i>
@@ -418,7 +493,12 @@
         </div>
         <p class="copyright">&copy; 2024 Tr3ple-Tech Global Ventures. NERC Certified | Licensed Electricians</p>
     </footer>
-
+    <div id="imageModal" class="modal" style="display: none;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-container">
+            <img class="modal-content" id="modalImage">
+        </div>
+    </div>
     <script>
         function redirectToWhatsApp() {
             // Custom pre-filled message for innovators and partners
@@ -427,13 +507,25 @@
             );
             
             // Your WhatsApp number
-            const phoneNumber = '+2349072751466';
+            const phoneNumber = '+23409072751466';
             
             // Create the WhatsApp URL
-            const whatsappUrl = `https://wa.me/+2349072751466?text=Hello Tr3ple-Tech! I need professional electrical/solar services. Please advise.`;
+            const whatsappUrl = `https://wa.me/+23409072751466 
+?text=Hello Tr3ple-Tech! I need professional electrical/solar services. Please advise.`;
             
             // Redirect to the WhatsApp URL
             window.location.href = whatsappUrl;
+        }
+    </script>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
         }
     </script>
 
@@ -458,6 +550,13 @@
             "closes": "18:00"
         }
     }
+    </script>
+    <script>
+        // Hamburger Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
     </script>
 </body>
 
