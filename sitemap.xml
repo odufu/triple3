@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
-        <loc>https://www.emeraldcodelines.org/scvistacore.html</loc>
+        <loc>https://www.tr3pletech.com/electrical.html</loc>
         <image:image>
-            <image:loc>https://www.emeraldcodelines.org/images/core/1.jpg</image:loc>
-            <image:caption>EC VistaCore Property Listing Screen - Real Estate Management</image:caption>
+            <image:loc>https://www.tr3pletech.com/images/electrical/1.jpg</image:loc>
+            <image:caption>Tr3ple-Tech Electrical Solutions - Residential Wiring Project</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://www.emeraldcodelines.org/images/core/2.jpg</image:loc>
-            <image:caption>EC VistaCore Payment Options Screen - Flexible Payment Plans</image:caption>
+            <image:loc>https://www.tr3pletech.com/images/electrical/2.jpg</image:loc>
+            <image:caption>Tr3ple-Tech Electrical Solutions - Commercial Installation</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://www.emeraldcodelines.org/images/core/3.jpg</image:loc>
-            <image:caption>EC VistaCore Virtual Walkthrough Screen - 360° Property View</image:caption>
+            <image:loc>https://www.tr3pletech.com/images/electrical/3.jpg</image:loc>
+            <image:caption>Tr3ple-Tech Smart Security Integration</image:caption>
         </image:image>
     </url>
     <url>
-        <loc>https://www.emeraldcodelines.org/ecurbanlense.html</loc>
+        <loc>https://www.tr3pletech.com/solar.html</loc>
         <image:image>
-            <image:loc>https://www.emeraldcodelines.org/images/core/1.jpg</image:loc>
-            <image:caption>EC Urban Lens Property Search Screen</image:caption>
+            <image:loc>https://www.tr3pletech.com/images/solar/1.jpg</image:loc>
+            <image:caption>Tr3ple-Tech Solar Solutions - Residential Panel Installation</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://www.emeraldcodelines.org/images/core/2.jpg</image:loc>
-            <image:caption>EC Urban Lens Virtual Walkthrough Screen</image:caption>
+            <image:loc>https://www.tr3pletech.com/images/solar/2.jpg</image:loc>
+            <image:caption>Tr3ple-Tech Solar Solutions - Commercial Projects</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://www.emeraldcodelines.org/images/core/3.jpg</image:loc>
-            <image:caption>EC Urban Lens Payment Options Screen</image:caption>
+            <image:loc>https://www.tr3pletech.com/images/solar/3.jpg</image:loc>
+            <image:caption>Tr3ple-Tech Solar Solutions - Industrial Solar Array</image:caption>
         </image:image>
     </url>
 </urlset>

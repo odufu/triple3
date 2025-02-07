@@ -7,4 +7,4 @@ User-agent: Googlebot-Image
 Allow: /images/
 Allow: /core/
 
-Sitemap: https://www.emeraldcodelines.org/sitemap.xml
+Sitemap: https://www.tr3pletech.com//sitemap.xml
